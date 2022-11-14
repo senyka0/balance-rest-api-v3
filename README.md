@@ -57,4 +57,9 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
+## API Request
+| Endpoint | HTTP Method | Description |
+| ------ | ------ | ------ |
+| /api/healthcheck	| GET |	Check if server is working |
+| /api/balance/:address |	GET	| Get address balance |
 
