@@ -6,7 +6,7 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get('balance/:address')
-  getHello(@Param('address') address: string): Promise<{
+  getBalance(@Param('address') address: string): Promise<{
     address: string;
     ethBalance: number;
     erc20Balance: {
@@ -17,5 +17,9 @@ export class AppController {
     }[];
   }> {
     return this.appService.getBalance(address);
+  }
+  @Get('healthcheck')
+  healthcheck() {
+    return 'OK';
   }
 }
